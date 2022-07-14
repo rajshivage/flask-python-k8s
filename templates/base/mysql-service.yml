@@ -12,4 +12,3 @@ spec:
     name: mysql
   selector:
     app: mysql-db
-  type: LoadBalancer
