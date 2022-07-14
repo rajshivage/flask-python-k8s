@@ -1,0 +1,13 @@
+commonLabels:
+  env: prod
+bases:
+- ../../base
+namespace: prod
+
+patches:
+- patch.yml
+
+images:
+- name: flask-app
+  newName: flask-app-prod
+  newTag: '1.0'

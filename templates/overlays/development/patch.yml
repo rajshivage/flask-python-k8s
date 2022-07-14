@@ -1,0 +1,8 @@
+# Development Deployment
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flask-api-deployment
+spec:
+  replicas: 1
