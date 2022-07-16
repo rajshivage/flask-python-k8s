@@ -18,14 +18,14 @@ spec:
       containers:
         - name: flask-api
           image: flask-app:1.0
-          imagePullPolicy: Never
+          imagePullPolicy: Always
           ports:
             - containerPort: 5000
           env:
             - name: db_root_password
               valueFrom:
                 secretKeyRef:
-                  name: flaskapi-secrets
+                  name: flask-api-secrets
                   key: db_root_password
             - name: db_name
               value: flaskapi
