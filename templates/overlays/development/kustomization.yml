@@ -9,5 +9,5 @@ patches:
 
 images:
 - name: flask-app
-  newName: flask-app-dev
+  newName: rajshivage/flask-app-dev
   newTag: '1.0'
