@@ -27,7 +27,7 @@ def index():
     return "Hello, world!"
 
 
-@app.route("/create", methods=["POST"])
+@app.route("/authors", methods=["POST"])
 def add_author():
     """
     Function to add a authors to the MySQL database
@@ -40,7 +40,7 @@ def add_author():
     description = req["description"]
 
     if name and email and book and publication and request.method == "POST":
-        sql = "INSERT INTO users(name, email, book, publication, description) " \
+        sql = "INSERT INTO authors(name, email, book, publication, description) " \
               "VALUES(%s, %s, %s)"
         data = (name, email, book, publication, description)
         try:
@@ -57,6 +57,17 @@ def add_author():
             return jsonify(str(exception))
     else:
         return jsonify("Please provide name, email, book and publication")
+
+@app.route("/authors")
+def get_authors():
+    conn = mysql.connect()
+    cursor = conn.cursor()
+    sql = "SELECT * FROM authors"
+    cursor.execute(sql)
+    records = cursor.fetchall()
+    cursor.close()
+    resp = jsonify(records)
+    return resp
       
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
