@@ -60,6 +60,9 @@ def add_author():
 
 @app.route("/authors")
 def get_authors():
+    """
+    Function to retrieve a authors to the MySQL database
+    """
     conn = mysql.connect()
     cursor = conn.cursor()
     sql = "SELECT * FROM authors"
