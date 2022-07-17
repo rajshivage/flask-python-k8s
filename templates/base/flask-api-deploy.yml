@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: flask-api
-          image: flask-app:1.0
+          image: rajshivage/flask-app-dev:1.0
           imagePullPolicy: Always
           ports:
             - containerPort: 5000
