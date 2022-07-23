@@ -1,5 +1,5 @@
 """
-APIs to Create, Read, Update, Delete authors using Flask Python Framework
+APIs to Create, and Read authors using Flask Python Framework
 
 """
 import os
