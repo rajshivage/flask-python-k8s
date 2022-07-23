@@ -24,7 +24,7 @@ def index():
     """
     Function to test the functionality of the API
     """
-    return "Hello, world!"
+    return "Hello, World!"
 
 
 @app.route("/authors", methods=["POST"])
