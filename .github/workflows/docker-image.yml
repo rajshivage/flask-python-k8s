@@ -1,4 +1,4 @@
-name: Docker Image CI
+name: Docker Image Build and Push CI
 
 on:
   push:
@@ -36,5 +36,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: 1.0
-          labels: ${{ steps.meta.outputs.labels }}
+          tags: '1.0'
