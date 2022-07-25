@@ -3,6 +3,7 @@ commonLabels:
 bases:
 - namespace.yaml
 - ../../base
+namespace: prod
 
 patches:
 - patch.yml
