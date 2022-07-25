@@ -1,13 +1,13 @@
 commonLabels:
   env: prod
 bases:
+- namespace.yaml
 - ../../base
-namespace: prod
 
 patches:
 - patch.yml
 
 images:
 - name: flask-app
-  newName: flask-app-prod
-  newTag: '1.0'
+  newName: rajshivage/flask-python-k8s
+  newTag: main

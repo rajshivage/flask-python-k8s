@@ -1,8 +1,8 @@
 commonLabels:
   env: dev
 bases:
+- namespace.yaml
 - ../../base
-namespace: dev
 
 patches:
 - patch.yml
