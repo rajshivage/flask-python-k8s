@@ -1,4 +1,4 @@
-name: build
+name: Build/Trivy Scan
 on:
   push:
     branches:
@@ -6,7 +6,7 @@ on:
   pull_request:
 jobs:
   build:
-    name: Build/Trivy Scan
+    name: Build
     runs-on: ubuntu-20.04
     steps:
       - name: Checkout code
